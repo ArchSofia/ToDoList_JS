@@ -183,7 +183,7 @@ input:checked ~ .bubble::after {
 
 .todo-item .todo-content input {
     columns: var(--dark);
-    font-size: 1.125rem;
+    font-size: 1.1251rem;
 }
 
 .todo-item .actions button {

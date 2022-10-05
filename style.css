@@ -55,6 +55,9 @@ h4 {
     margin-bottom: 0.5rem;
 }
 
+.greeting .title {
+    display: flex;
+}
 
 .greeting .title input {
     margin-left: 0.5rem;
@@ -104,6 +107,7 @@ input[type="radio"],
 input[type="checkbox"] {
     display: none;
 }
+/* we dont display these because we are going to make our own radio checkboxes */
 
 .bubble {
     display: flex;
@@ -137,6 +141,7 @@ input[type="checkbox"] {
     background-color: var(--personal);
     box-shadow: var(--personal-glow);
 }
+/* if input is NEXT TO "~" .bubble::after then {} */
 
 input:checked ~ .bubble::after {
     width: 10px;
@@ -167,6 +172,10 @@ input:checked ~ .bubble::after {
     opacity: 0.75;
 }
 
+.todo-list .list {
+    margin: 1rem 0;
+}
+
 .todo-list .todo-item {
     display: flex;
     align-items: center;
@@ -177,23 +186,53 @@ input:checked ~ .bubble::after {
     margin-bottom: 1rem;
 }
 
+.todo-item label{
+    display: block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
 .todo-item .todo-content {
     flex: 1 1 0%;
 }
 
 .todo-item .todo-content input {
     columns: var(--dark);
-    font-size: 1.1251rem;
+    font-size: 1.125rem;
+}
+
+.todo-item .actions {
+    display: flex;
+    align-items: center;
 }
 
 .todo-item .actions button {
     display: block;
-    padding: 00.5rem;
+    padding: 0.5rem;
     border-radius: 0.25rem;
     color: #FFF;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
+
+.todo-item .actions button:hover {
+opacity: 0.75;
+}
+.todo-item .actions .edit {
+    margin-right: 0.5rem;
+    background-color: var(--primary);
+}
+
+.todo-item .actions .delete {
+    background-color: var(--danger);
+}
+
+.todo-item.done .todo-content input {
+    text-decoration:line-through;
+    color: var(--grey);
+}
+
+
 
 
 
